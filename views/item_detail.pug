@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+    h1 #{item.name}
+    ul  
+        
+        li #{item.description}
+        li 
+            a(href = item.category.url) #{item.category.name}
+        li $#{item.price}
+        
+    hr
+    p
+        a(href=item.url+'/delete') Delete word

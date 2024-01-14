@@ -1,0 +1,18 @@
+extends layout 
+
+block content  
+    h1 #{category.name}
+    if category_detail.length
+        ul
+        each item in category_detail
+            li
+            a(href=item.url) #{item.name}
+
+
+    else
+        p There are no words in this category yet.
+
+    hr
+    p
+        a(href=category.url+'/delete') Delete category
+
